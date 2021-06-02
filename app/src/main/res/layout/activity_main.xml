@@ -19,6 +19,7 @@
         android:textSize="22sp" />
 
     <TextView
+        android:id="@+id/andar_out"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
@@ -42,7 +43,7 @@
         android:text="2/5 \n pessoas no \n elevador"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:textStyle="bold" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -51,6 +52,7 @@
         android:hint="@string/hint_andar">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/andar_in"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -59,7 +61,7 @@
 
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnAndar"
+        android:id="@+id/btn_andar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/enter_andar"
@@ -99,6 +101,6 @@
             android:layout_marginEnd="50dp"
             android:layout_toStartOf="@id/btn_sair"
             android:text="@string/str_entrar"
-            android:textSize="16sp" />gfds
+            android:textSize="16sp" />
     </RelativeLayout>
 </LinearLayout>

@@ -1,26 +1,26 @@
 package com.g.elevadorapp
 
-class Elevador(val capacidade : Int = 1, val total_andares : Int = 1, var andar_atual : Int = 0, var qty_pessoas : Int = 0){
+class Elevador(val capacidade : Int = 1, val total_andares : Int = 1, var andar_atual : Int = 0, var total_pessoas : Int = 0){
 
     fun checarCapacidade() : Boolean {
-        return this.qty_pessoas + 1 <= this.capacidade
+        return this.total_pessoas + 1 <= this.capacidade
     }
 
     fun updateAndar (num: Int) {
-        if (num <= this.total_andares) { // in 0 .. qty_tanday
+        if (num in 1..total_andares) { // in 1 .. qty_tanday
             this.andar_atual = num
         }
     }
 
     fun addPessoa() {
         if (this.checarCapacidade()) {
-            this.qty_pessoas += 1
+            this.total_pessoas++
         }
     }
 
     fun tirarPessoa() {
-        if (qty_pessoas > 0) {
-            this.qty_pessoas -= 1
+        if (total_pessoas > 0) {
+            this.total_pessoas--
         }
     }
 }

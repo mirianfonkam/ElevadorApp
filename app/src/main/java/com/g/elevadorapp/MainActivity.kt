@@ -2,9 +2,9 @@ package com.g.elevadorapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.TextView
 import com.google.android.material.button.MaterialButton
+import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,22 +16,27 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val btnEntrar = findViewById<MaterialButton>(R.id.btn_entrar)
-        val evQtyPessoa = findViewById<TextView>(R.id.ev_result)
+        val evTotalPessoas = findViewById<TextView>(R.id.ev_result)
+        val evAndarIn = findViewById<TextInputEditText>(R.id.andar_in)
+        val evAndarOut = findViewById<TextView>(R.id.andar_out)
         val btnSair = findViewById<MaterialButton>(R.id.btn_sair)
+        val btnAndar = findViewById<MaterialButton>(R.id.btn_andar)
 
         btnEntrar.setOnClickListener {
             ev.addPessoa()
-            evQtyPessoa.text = "${ev.qty_pessoas}/5 \n pessoas no \n elevador"
+            evTotalPessoas.text = "${ev.total_pessoas}/5 \n pessoas no \n elevador"
         }
 
         btnSair.setOnClickListener{
             ev.tirarPessoa()
-            evQtyPessoa.text =  "${ev.qty_pessoas}/5 \n pessoas no \n elevador"
+            evTotalPessoas.text =  "${ev.total_pessoas}/5 \n pessoas no \n elevador"
         }
 
-    //    btnAndar.setOnClickListener{
-//            ev.updateAndar(numInput)
-//        }
+        btnAndar.setOnClickListener{
+            val andar = evAndarIn.text.toString().toInt()
+            ev.updateAndar(andar)
+            evAndarOut.text = "${ev.andar_atual}o andar"
+        }
 
 
     }
