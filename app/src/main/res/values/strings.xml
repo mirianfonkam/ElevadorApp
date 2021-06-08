@@ -1,6 +1,6 @@
 <resources>
     <string name="static_txt1">Você está no</string>
-    <string name="ev_andar">5o andar</string>
+    <string name="ev_andar">5º <br></br> andar</string>
     <string name="ev_num_pessoas">2/5</string>
     <string name="ev_txt_pessoas">pessoas no elevador</string>
     <string name="app_name">Elevator App</string>

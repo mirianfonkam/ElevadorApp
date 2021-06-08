@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         btnAndar.setOnClickListener{
             val andar = evAndarIn.text.toString().toInt()
             ev.updateAndar(andar)
-            evAndarOut.text = "${ev.andar_atual}o andar"
+            evAndarOut.text = "${ev.andar_atual}º \nandar"
         }
 
 
