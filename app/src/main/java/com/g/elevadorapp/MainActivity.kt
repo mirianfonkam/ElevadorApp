@@ -8,7 +8,7 @@ import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
 
-    val ev = Elevador(5,12, 5, 2 )
+    val ev = Elevador(5,12, 0, 0 )
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
