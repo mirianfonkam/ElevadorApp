@@ -24,12 +24,12 @@ class MainActivity : AppCompatActivity() {
 
         btnEntrar.setOnClickListener {
             ev.addPessoa()
-            evTotalPessoas.text = "${ev.total_pessoas}/5 \n pessoas no \n elevador"
+            evTotalPessoas.text = "${ev.total_pessoas}/5"
         }
 
         btnSair.setOnClickListener{
             ev.tirarPessoa()
-            evTotalPessoas.text =  "${ev.total_pessoas}/5 \n pessoas no \n elevador"
+            evTotalPessoas.text =  "${ev.total_pessoas}/5"
         }
 
         btnAndar.setOnClickListener{
