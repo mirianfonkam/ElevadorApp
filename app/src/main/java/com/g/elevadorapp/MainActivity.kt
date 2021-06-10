@@ -8,7 +8,7 @@ import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
 
-    val ev = Elevador(5,12, 0, 0 )
+    val ev = Elevador(5,12, 5, 0 )
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,7 +18,10 @@ class MainActivity : AppCompatActivity() {
         val btnEntrar = findViewById<MaterialButton>(R.id.btn_entrar)
         val evTotalPessoas = findViewById<TextView>(R.id.ev_result)
         val evAndarIn = findViewById<TextInputEditText>(R.id.andar_in)
+
         val evAndarOut = findViewById<TextView>(R.id.andar_out)
+        evAndarOut.text = getString(R.string.ev_andar, ev.andar_atual)
+
         val btnSair = findViewById<MaterialButton>(R.id.btn_sair)
         val btnAndar = findViewById<MaterialButton>(R.id.btn_andar)
 
@@ -35,9 +38,7 @@ class MainActivity : AppCompatActivity() {
         btnAndar.setOnClickListener{
             val andar = evAndarIn.text.toString().toInt()
             ev.updateAndar(andar)
-            evAndarOut.text = "${ev.andar_atual}º \nandar"
+            evAndarOut.text = getString(R.string.ev_andar, ev.andar_atual)
         }
-
-
     }
 }
