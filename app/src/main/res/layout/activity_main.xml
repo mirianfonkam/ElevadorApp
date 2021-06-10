@@ -54,25 +54,25 @@
         android:id="@+id/ev_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="2/5"
+        android:text="@string/ev_num_pessoas"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="50sp"
+        android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/ev_static"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/ev_circle"
-        app:layout_constraintHorizontal_chainStyle="packed"/>
+        app:layout_constraintTop_toTopOf="@+id/ev_circle" />
 
     <TextView
         android:id="@+id/ev_static"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="pessoas no\nelevador"
+        android:text="@string/ev_txt_pessoas"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/ev_circle"
         app:layout_constraintEnd_toEndOf="parent"
@@ -94,8 +94,7 @@
             android:id="@+id/andar_in"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="40dp"
-            tools:layout_editor_absoluteY="409dp" />
+            android:inputType="number"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
@@ -108,7 +107,6 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -122,12 +120,7 @@
         android:textSize="22sp"
         app:layout_constraintBottom_toTopOf="@+id/btn_entrar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.465"
         app:layout_constraintStart_toStartOf="parent" />
-
-
-
-
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_sair"
