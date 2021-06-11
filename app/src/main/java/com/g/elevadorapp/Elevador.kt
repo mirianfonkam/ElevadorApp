@@ -1,9 +1,9 @@
 package com.g.elevadorapp
 
-class Elevador(val capacidade : Int = 1, val total_andares : Int = 1, var andar_atual : Int = 0, var total_pessoas : Int = 0){
+class Elevador(val capacidade_pessoas : Int = 1, val total_andares : Int = 1, var andar_atual : Int = 0, var total_pessoas : Int = 0){
 
     fun checarCapacidade() : Boolean {
-        return this.total_pessoas + 1 <= this.capacidade
+        return this.total_pessoas + 1 <= this.capacidade_pessoas
     }
 
     fun updateAndar (num: Int) {

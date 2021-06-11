@@ -15,24 +15,27 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val btnEntrar = findViewById<MaterialButton>(R.id.btn_entrar)
-        val evTotalPessoas = findViewById<TextView>(R.id.ev_result)
         val evAndarIn = findViewById<TextInputEditText>(R.id.andar_in)
+
+        val evTotalPessoas = findViewById<TextView>(R.id.ev_result)
+        evTotalPessoas.text = getString(R.string.ev_num_pessoas,ev.total_pessoas,ev.capacidade_pessoas)
+
 
         val evAndarOut = findViewById<TextView>(R.id.andar_out)
         evAndarOut.text = getString(R.string.ev_andar, ev.andar_atual)
 
+        val btnEntrar = findViewById<MaterialButton>(R.id.btn_entrar)
         val btnSair = findViewById<MaterialButton>(R.id.btn_sair)
         val btnAndar = findViewById<MaterialButton>(R.id.btn_andar)
 
         btnEntrar.setOnClickListener {
             ev.addPessoa()
-            evTotalPessoas.text = "${ev.total_pessoas}/5"
+            evTotalPessoas.text = getString(R.string.ev_num_pessoas,ev.total_pessoas,ev.capacidade_pessoas)
         }
 
         btnSair.setOnClickListener{
             ev.tirarPessoa()
-            evTotalPessoas.text =  "${ev.total_pessoas}/5"
+            evTotalPessoas.text = getString(R.string.ev_num_pessoas,ev.total_pessoas,ev.capacidade_pessoas)
         }
 
         btnAndar.setOnClickListener{

@@ -39,12 +39,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <View
+    <ImageView
         android:id="@+id/ev_circle"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/circle"
+        android:contentDescription="@string/circle"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,7 +58,7 @@
         android:text="@string/ev_num_pessoas"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="60sp"
+        android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/ev_static"
         app:layout_constraintEnd_toEndOf="parent"
